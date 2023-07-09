@@ -1,103 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #loginform {
+      margin: auto;
+      width: 30%;
+      margin-top:50px;
+      box-sizing: border-box;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+
+    .input {
+      width: 100%;
+      height: 30px;
+      margin-bottom: 20px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 14px;
+    }
+
+    #loginform label {
+      text-align: left;
+      font-weight: bold;
+      font-size: 14px;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    #checkbox {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      font-size: 13px;
+      justify-content: flex-start;
+    }
+
+    #checkbox input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    #submit {
+      width: 100%;
+      height: 40px;
+      color: white;
+      background-color: #0056b3;
+      font-weight: bold;
+      letter-spacing: 1px;
+      font-size: 14px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    @media only screen and (max-width: 600px) {
       #loginform {
-        margin: auto;
-        width: 30%;
-        box-sizing: border-box;
-        text-align: center;
-        text-transform: uppercase;
-        
+        width: 80%;
       }
-      .input {
-        width: 98%;
-        height: 25px;
-        margin-top: -15px;
-        margin-bottom: 30px;
-      }
-      #loginform label {
-        display: flex;
-        justify-content: left;
-      }
-      #submit {
-        width: 100%;
-        height: 40px;
-        color: white;
-        background-color: black;
-        font-weight: bold;
-        letter-spacing: 5px;
-        font-size: 13px;
-        padding: 13px 20px;
-      }
-      #checkbox {
-        display: flex;
-        align-items: center;
-        padding: 0px 10px;
-        font-size: 13px;
-        justify-content: space-around;
-      }
-      @media only screen and (max-width: 600px) {
-          #loginform{
-              width: 60%;
-
-          }
-      }
-      @media only screen and (max-width: 1000px) {
-          #loginform{
-              width: 60%;
-
-          }
-      }
-    </style>
-    <title>Signup</title>
-  </head>
-  <body>
-    <form id="loginform" onsubmit="register(event)">
-      <h1>CREATE ACCOUNT</h1>
-      <label for="UserFirstName">First Name</label><br />
-      <input class="input" id="UserFirstName" type="text" /><br />
-      <label for="UserLastName">Last Name</label><br />
-      <input class="input" id="UserLastName" type="text" /><br />
-      <label for="UsearEmail">Email</label><br />
-      <input class="input" id="UsearEmail" type="email" /><br />
-      <label for="UserPassword">Password</label><br />
-      <input class="input" id="UserPassword" type="password" /><br />
-      <div id="checkbox">
-        <input type="checkbox" />
-        <p>Subscribe to stay updated with new offers!</p>
-      </div>
-      <button id="submit">CREATE</button>
-    </form>
-  </body>
+    }
+  </style>
+</head>
+<body>
+  <form id="loginform" onsubmit="register(event)">
+    <h1>CREATE ACCOUNT</h1>
+    <label for="UserFirstName">First Name</label>
+    <input class="input" id="UserFirstName" type="text" required>
+    <label for="UserLastName">Last Name</label>
+    <input class="input" id="UserLastName" type="text" required>
+    <label for="UsearEmail">Email</label>
+    <input class="input" id="UsearEmail" type="email" required>
+    <label for="UserPassword">Password</label>
+    <input class="input" id="UserPassword" type="password" required>
+    <div id="checkbox">
+      <input type="checkbox">
+      <p>Subscribe to stay updated with new offers!</p>
+    </div>
+    <button id="submit" type="submit">CREATE</button>
+  </form>
+</body>
 </html>
 <script>
-  const register=(event)=>{
-   event.preventDefault()
-   let form = document.getElementById("loginform")
-   let First = form.UserFirstName.value
-   let Last  = form.UserLastName.value
-   let Email = form.UsearEmail.value
-   let Password = form.UserPassword.value
-   let user = {
-     First,
-     Last,
-     Email,
-     Password
-   }
-   console.log(First, Last, Email, Password);
-   if(First!=="" & Last!=="" & Email!=="" & Password!==""){
-     let Users = JSON.parse(localStorage.getItem("Users")) || [];
-     Users.push(user)
-     localStorage.setItem("Users",JSON.stringify(Users))
-     window.location.href="login.html"
-   }else{
-     alert(" Please Enter All Information")
-   }
-
- }
-
+  const register = (event) => {
+    event.preventDefault();
+    let form = document.getElementById("loginform");
+    let First = form.UserFirstName.value;
+    let Last = form.UserLastName.value;
+    let Email = form.UsearEmail.value;
+    let Password = form.UserPassword.value;
+    let user = {
+      First,
+      Last,
+      Email,
+      Password
+    };
+    console.log(First, Last, Email, Password);
+    if (First !== "" && Last !== "" && Email !== "" && Password !== "") {
+      let Users = JSON.parse(localStorage.getItem("Users")) || [];
+      Users.push(user);
+      localStorage.setItem("Users", JSON.stringify(Users));
+      window.location.href = "login.html";
+    } else {
+      alert("Please enter all information");
+    }
+  }
 </script>
