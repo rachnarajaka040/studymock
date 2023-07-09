@@ -1,15 +1,186 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>RESt Of The Code</h1>
-    <a href="./components/home.html">Home</a>
-     <a href="./components/login.html">Login</a>
-     <a href="./components/signup.html">Signup</a>
-</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>navbar</title>
+  </head>
+  <style>
+    #container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: rgb(23, 23, 54);
+      color: white;
+      align-items: center;
+      padding: 10px;
+
+    }
+    span {
+      padding: 10px;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+      cursor: pointer;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .header {
+      background-color: #007bff;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .hero {
+      background-image: url('recruitment-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-size: 48px;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+    
+    .features {
+      padding: 50px 0;
+      text-align: center;
+    }
+    
+    .feature-card {
+      max-width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 30px;
+    }
+    
+    .feature-card h3 {
+      color: #007bff;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    .benefits {
+      background-color: #f8f8f8;
+      padding: 50px 0;
+      text-align: center;
+    }
+    
+    .benefits-card {
+      max-width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 30px;
+    }
+    
+    .benefits-card h3 {
+      color: #007bff;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    .cta {
+      background-color: #007bff;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .cta a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 30px;
+      background-color: #0056b3;
+      border-radius: 5px;
+    }
+    
+    .footer {
+      background-color: #f8f8f8;
+      color: #333;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+  </style>
+  <body>
+    <div id="container">
+      <span> <h1>Rest Of The Code</h1></span>
+      <div>
+        <span> <a href="./components/login.html"> Login</a></span>
+        <span> <a href="./components/signup.html"> Signup</a></span>
+        <span> <a href="./components/Search.html"> Search</a></span>
+      </div>
+    </div>
+    <h2 style="text-align: center;">Key Features</h2>
+    <section class="features" id="features" style="display: flex;">
+      
+      <div class="feature-card">
+        <h3>Intelligent Candidate Matching</h3>
+        <p>Say goodbye to manual sifting through resumes.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Automated Job Posting</h3>
+        <p>Post job openings effortlessly across multiple platforms.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Customizable Applicant Tracking</h3>
+        <p>Keep track of your entire recruitment process in one place.</p>
+      </div>
+      <div class="feature-card">
+        <h3>AI-Powered Interview Assistance</h3>
+        <p>Enhance your interview process with AI-powered tools.</p>
+      </div>
+    </section>
+    
+    <h2 style="text-align: center;">Benefits for Hiring Managers and HR Professionals</h2>
+    <section class="benefits" style="display: flex;">
+     
+      <div class="benefits-card">
+        <h3>Time and Cost Savings</h3>
+        <p>Focus on strategic decision-making and save money.</p>
+      </div>
+      <div class="benefits-card">
+        <h3>Improved Candidate Quality</h3>
+        <p>Receive a curated list of top candidates.</p>
+      </div>
+      <div class="benefits-card">
+        <h3>Enhanced Collaboration</h3>
+        <p>Stay aligned with your team throughout the hiring process.</p>
+      </div>
+      <div class="benefits-card">
+        <h3>Data-Driven Insights</h3>
+        <p>Gather valuable insights to optimize your recruitment strategies.</p>
+      </div>
+    </section>
+    
+    <section class="cta">
+      <h2>Join the Future of Recruitment</h2>
+      <p>Sign up today and take your hiring process to new heights.</p>
+      <a href="#signup">Sign Up Now!</a>
+    </section>
+    
+    <footer class="footer">
+      <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+    </footer>
+  </body>
+</html> 
+
+
